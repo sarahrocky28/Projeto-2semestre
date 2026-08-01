@@ -3,6 +3,7 @@
     margin: 0;
     text-decoration: none;
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 img{
@@ -39,12 +40,10 @@ nav{
     border-radius: 100%;
     padding: 7px;
     width: 40px;
-    
-
 }
 
 .container-icons > img:hover{
-    background-color: rgb(222, 167, 95);
+    background-color: #32A860;;
 }
 section{
     grid-area: section;
@@ -55,3 +54,44 @@ main{
     grid-area: main;
     background-color: rosybrown;
 }
+
+/* section{
+    display: flex;
+    background-color: #FFFFFF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form > input{
+    border-radius: 50px;
+    border: 1px #F6F5F4 solid;
+    width: 500px;
+    height: 20px;
+    align-items: center;
+} */
+
+section{
+    background-color: #F6F5F4;
+}
+.container-what, .btn-new-chat{
+    display: flex;
+}
+
+.container-what > h1 {
+    color: #32A860;
+    font-size: 25px;
+}
+
+.container-what{
+padding: 10px;
+justify-content: space-between;
+
+}
+.btn-new-chat{
+    gap: 15px;
+    padding: 7px;
+    border-radius: 20px;
+}
+.btn-new-chat:hover{
+    background-color: #32A860;
+}
+
