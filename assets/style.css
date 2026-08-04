@@ -14,7 +14,7 @@ body{
     display: grid;
     grid-template-areas: 
     "nav section main";
-    grid-template-columns: 60px 1fr 2fr ;
+    grid-template-columns: 60px 550px 2fr ;
     grid-template-rows: 1fr;
 }
 
@@ -47,16 +47,16 @@ nav{
 }
 section{
     grid-area: section;
-    background-color: steelblue;
 }
 
 main{
     grid-area: main;
-    background-color: rosybrown;
+    background-color: rgb(225, 205, 205);
 }
 
 section{
     background-color: #F6F5F4;
+    overflow-y: scroll ;
 }
 .container-what, .btn-new-chat{
     display: flex;
@@ -72,24 +72,126 @@ padding: 10px;
 justify-content: space-between;
 
 }
+
 .btn-new-chat{
-    gap: 15px;
+    gap: 25px; 
+}
+
+#icon-2:hover{
+background-color: #32A860;
+}
+
+#icon-2{
     padding: 7px;
     border-radius: 20px;
 }
-.btn-new-chat:hover{
-    background-color: #32A860;
+
+.container-cima{
+position: fixed;
+background-color: #f7f5f2;
+width: 550px;
 }
 
+.container-baixo{
+
+}
 form{
-padding: 12;
+padding: 12px;
+
 }
 
 input{
     border-radius: 20px;
     border: 1px #F6F5F4 solid;
     width: 100%;
-    background-color: #f6f5f4d4;
+    background-color: #ebe9e8d4;
     padding: 12px 16px;
     outline: #32A860;
 }
+.botao{
+    border-radius: 15px;
+    padding: 6px ;
+    font-size: 15px;
+    justify-content: space-around;
+    border: 1px solid #ebe9e8d4;
+    margin: 7px 15px;
+    background-color: #ebe9e8d4;
+}
+
+.botao:hover{
+    background-color: #c2ffd9;
+}
+
+.mensagens{
+    width: 500px;
+    display: grid;
+    grid-area: "foto";
+    grid-template-columns: 60px 380px 60px ;
+    grid-template-rows: 40px 40px;
+
+}
+
+
+#perfil-conversa{
+    border-radius: 100%;
+    padding: 7px;
+    width: 60px;
+}
+
+#noti{
+    background-color: #32A860;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F6F5F4;
+}
+
+#msg_extensa{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#horas{
+    color: #32A860;
+}
+
+.mensagens {
+    width: 500px;
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "foto info extra"
+        "foto info extra";
+    align-items: center;
+    column-gap: 10px;
+    padding: 10px;
+}
+
+.container-foto {
+    grid-area: foto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-info {
+    grid-area: info;
+    min-width: 0; 
+}
+
+.msn-bol {
+    grid-area: extra;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+}
+
+
