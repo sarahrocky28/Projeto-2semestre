@@ -9,16 +9,19 @@
 img{
     display: block;
 }
+
+/*Geral*/
 body{
     height: 100dvh;
     display: grid;
     grid-template-areas: 
     "nav section main";
-    grid-template-columns: 60px 550px 2fr ;
+    grid-template-columns: 60px 550px 2fr;
     grid-template-rows: 1fr;
+    overflow: hidden; 
 }
 
-
+/*Col 1 = onde esta o perfil*/
 nav{
     grid-area: nav;
     background-color: #f7f5f2;
@@ -45,19 +48,26 @@ nav{
 .container-icons > img:hover{
     background-color: #32A860;;
 }
-section{
+
+
+/*Col 2 - Botôes e imagens*/
+.container_conversas{
     grid-area: section;
-}
-
-main{
-    grid-area: main;
-    background-color: rgb(225, 205, 205);
-}
-
-section{
     background-color: #F6F5F4;
-    overflow-y: scroll ;
+    height: 100dvh;       
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;      
 }
+
+/*Metade 1*/
+.container-cima{
+   
+    flex-shrink: 0;         
+    background-color: #f7f5f2;
+}
+
+
 .container-what, .btn-new-chat{
     display: flex;
 }
@@ -86,15 +96,7 @@ background-color: #32A860;
     border-radius: 20px;
 }
 
-.container-cima{
-position: fixed;
-background-color: #f7f5f2;
-width: 550px;
-}
 
-.container-baixo{
-
-}
 form{
 padding: 12px;
 
@@ -108,6 +110,7 @@ input{
     padding: 12px 16px;
     outline: #32A860;
 }
+
 .botao{
     border-radius: 15px;
     padding: 6px ;
@@ -122,13 +125,26 @@ input{
     background-color: #c2ffd9;
 }
 
+/*Metade 2*/
+
+.container-baixo{
+flex: 1;
+overflow-y: auto;
+margin-top: 0;
+}
+
 .mensagens{
     width: 500px;
     display: grid;
     grid-area: "foto";
     grid-template-columns: 60px 380px 60px ;
     grid-template-rows: 40px 40px;
-
+    grid-template-areas:
+        "foto info extra"
+        "foto info extra";
+    align-items: center;
+    column-gap: 10px;
+    padding: 10px;
 }
 
 
@@ -159,18 +175,6 @@ input{
     color: #32A860;
 }
 
-.mensagens {
-    width: 500px;
-    display: grid;
-    grid-template-columns: 60px 1fr 60px;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "foto info extra"
-        "foto info extra";
-    align-items: center;
-    column-gap: 10px;
-    padding: 10px;
-}
 
 .container-foto {
     grid-area: foto;
@@ -195,3 +199,88 @@ input{
 }
 
 
+
+main{
+    grid-area: main;
+    background-image: url(./imgs/whatsapp_bg.png);
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+header{
+    background-color: white;
+    border-left: 1px solid grey;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foto-contato-header{
+    width: 50px;
+    border-radius: 100%;
+}
+
+.foto-header-container{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.foto-header-container > p{
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.grid-msg{
+    flex: 1;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    row-gap: 10px;
+    padding: 10px;
+    align-content: safe end;
+    overflow-y: auto;
+}
+
+.icon-header{
+    display: flex;
+    padding: 7px;
+}
+
+.icon-header-separado{
+    margin: 10px;
+    border-radius: 100%;
+    padding: 7px;
+}
+
+.icon-header-separado:hover{
+background-color: #32A860;
+}
+#send-msg{
+    background-color: white;
+
+}
+
+.recebidas{
+    grid-column: 2/14;
+    background-color: #f7f5f2;
+    
+}
+
+.enviadas, .recebidas{
+padding: 5px 10px;
+border-radius: 20px;
+height: fit-content;
+align-self: flex-end;
+}
+
+.enviadas{
+    grid-column: 12/24;
+    text-align: end;
+    background-color: #D9FDD3;
+    place-self: end;
+}
