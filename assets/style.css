@@ -237,13 +237,13 @@ header{
 
 .grid-msg{
     flex: 1;
-    overflow-y: auto;
     display: grid;
     grid-template-columns: repeat(24, 1fr);
     row-gap: 10px;
     padding: 10px;
     align-content: safe end;
     overflow-y: auto;
+    
 }
 
 .icon-header{
@@ -260,9 +260,15 @@ header{
 .icon-header-separado:hover{
 background-color: #32A860;
 }
+
 #send-msg{
     background-color: white;
 
+}
+
+span{
+    display: flex;
+    justify-content: end;
 }
 
 .recebidas{
@@ -273,9 +279,10 @@ background-color: #32A860;
 
 .enviadas, .recebidas{
 padding: 5px 10px;
-border-radius: 20px;
+border-radius: 15px;
 height: fit-content;
 align-self: flex-end;
+position: relative;
 }
 
 .enviadas{
@@ -283,4 +290,22 @@ align-self: flex-end;
     text-align: end;
     background-color: #D9FDD3;
     place-self: end;
+}
+
+.cauda-esquerda{
+    border-left: 45px solid transparent;
+    border-right: 45px solid #f7f5f2;
+    border-bottom: 45px solid transparent;
+    position: absolute;
+    left: -77px;
+    top: 0px;
+}
+
+.cauda-direita{
+    border-left: 45px solid transparent;
+    border-right: 45px solid #f7f5f2;
+    border-bottom: 45px solid transparent;
+    position: absolute;
+    right: 77px;
+    top: 0px;
 }
