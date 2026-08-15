@@ -133,7 +133,7 @@ overflow-y: auto;
 margin-top: 0;
 }
 
-.mensagens{
+article{
     width: 500px;
     display: grid;
     grid-area: "foto";
@@ -269,6 +269,7 @@ background-color: #32A860;
 span{
     display: flex;
     justify-content: end;
+    padding: 7px;
 }
 
 .recebidas{
@@ -293,19 +294,19 @@ position: relative;
 }
 
 .cauda-esquerda{
-    border-left: 45px solid transparent;
-    border-right: 45px solid #f7f5f2;
-    border-bottom: 45px solid transparent;
+    border-left: 35px solid transparent;
+    border-right: 35px solid #f7f5f2;
+    border-bottom: 35px solid transparent;
     position: absolute;
-    left: -77px;
+    left: -60px;
     top: 0px;
 }
 
 .cauda-direita{
-    border-left: 45px solid transparent;
-    border-right: 45px solid #f7f5f2;
-    border-bottom: 45px solid transparent;
+    border-left: 35px solid #D9FDD3;
+    border-right: 35px solid transparent;
+    border-bottom: 35px solid transparent;
     position: absolute;
-    right: 77px;
+    right: -60px;
     top: 0px;
 }
