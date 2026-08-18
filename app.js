@@ -20,7 +20,10 @@ const elemento = {
 
 }
 
-function criarContatos(srcFoto, nome, hora, ultima, naoLidas, idContato)
+function criarContatos(srcFoto, nome, hora, ultima, naoLidas, idContato) {
+
+}
+
 
 const cardContainer = document.createElement("article");
 const fotoContato = document.createElement("img");
@@ -28,7 +31,6 @@ const nomeContato = document.createElement("p");
 const hora_msg_recebida = document.createElement("p");
 const msg_recebida = document.createElement("p");
 const msg_nao_lidas = document.createElement("p");
-
 
 //mudar no css
 cardContainer.className = "container_msg";
