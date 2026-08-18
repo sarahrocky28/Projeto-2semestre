@@ -10,7 +10,6 @@ img{
     display: block;
 }
 
-/*Geral*/
 body{
     height: 100dvh;
     display: grid;
@@ -21,7 +20,7 @@ body{
     overflow: hidden; 
 }
 
-/*Col 1 = onde esta o perfil*/
+/*Col 1*/
 nav{
     grid-area: nav;
     background-color: #f7f5f2;
@@ -39,6 +38,7 @@ nav{
     gap: 10px;
 }
 
+
 .container-icons > img {
     border-radius: 100%;
     padding: 7px;
@@ -50,7 +50,9 @@ nav{
 }
 
 
-/*Col 2 - Botôes e imagens*/
+
+
+/*Col 2 */
 .container_conversas{
     grid-area: section;
     background-color: #F6F5F4;
@@ -266,10 +268,19 @@ background-color: #32A860;
 
 }
 
+.figurinha{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 905px;
+    left: 640px;
+    background-color: #ffff;
+}
+
 span{
     display: flex;
     justify-content: end;
-    padding: 7px;
+    padding: 5px 7px 7px 2px;
 }
 
 .recebidas{
@@ -279,7 +290,7 @@ span{
 }
 
 .enviadas, .recebidas{
-padding: 5px 10px;
+padding: 7px 7px;
 border-radius: 15px;
 height: fit-content;
 align-self: flex-end;
@@ -298,7 +309,7 @@ position: relative;
     border-right: 35px solid #f7f5f2;
     border-bottom: 35px solid transparent;
     position: absolute;
-    left: -60px;
+    left: -63px;
     top: 0px;
 }
 
@@ -310,3 +321,5 @@ position: relative;
     right: -60px;
     top: 0px;
 }
+
+
